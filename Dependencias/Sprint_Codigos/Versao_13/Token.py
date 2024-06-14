@@ -19,6 +19,7 @@ texto = input("Informe o texto: ")
 tokens = list(texto)  # Inicializa os tokens como uma lista de caracteres
 print("Tokens iniciais:", tokens)
 
+
 # # print()
 
 # # def get_stats(tokens):
