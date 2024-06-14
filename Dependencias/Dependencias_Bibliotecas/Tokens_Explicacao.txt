@@ -1,0 +1,57 @@
+ 1 - modelo de processamento de linguagem natural (PLN);
+ 2 -    Tokens são as unidades mínimas que um modelo de PLN processa. 
+		Eles podem ser palavras, partes de palavras ou caracteres, 
+		dependendo do contexto e da ferramenta.
+		Em modelos baseados em GPT-4, os tokens são baseados em pares de 
+		bytes (byte pair encoding, BPE).
+		
+		
+						"visual" -> ['v', 'i', 's', 'u', 'a', 'l']
+						
+						Pares: ('v', 'i'), ('i', 's'), ('s', 'u'), ('u', 'a'), ('a', 'l')
+							*par ('i', 's') é o mais frequente.
+						
+						-------------------------------------------------------------------
+						
+						['v', 'i', 's', 'u', 'a', 'l']
+						->
+						['v', 'is', 'u', 'a', 'l']
+							*Novos pares: ('v', 'is'), ('is', 'u'), ('u', 'a'), ('a', 'l')
+							*Supondo que agora o par ('u', 'a') é o mais frequente.
+						
+						-------------------------------------------------------------------
+						
+						['v', 'is', 'u', 'a', 'l']
+						->
+						['v', 'is', 'ua', 'l']
+							*Novos pares: ('v', 'is'), ('is', 'ua'), ('ua', 'l')
+							*Supondo que agora o par ('is', 'ua') é o mais frequente.
+
+						--------------------------------------------------------------------
+						
+						['v', 'is', 'ua', 'l']
+						->
+						['v', 'isua', 'l']
+							*Novos pares: ('v', 'isua'), ('isua', 'l')
+							*Supondo que agora o par ('v', 'isua') é o mais frequente.
+						--------------------------------------------------------------------
+						
+						['v', 'isua', 'l']
+						->
+						['visua', 'l']
+							*Novos pares: ('visua', 'l')
+							*Supondo que agora o par ('visua', 'l') é o mais frequente.
+
+						--------------------------------------------------------------------
+						
+						['visua', 'l']
+						->
+						['visual']
+						
+						--------------------------------------------------------------------
+
+		
+		
+		
+
+		

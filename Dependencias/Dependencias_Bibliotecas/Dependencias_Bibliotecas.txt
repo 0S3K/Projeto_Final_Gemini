@@ -1,0 +1,7 @@
+COMANDO DE DEPENDÊNCIA PARA 
+BAIXAR AS BIBLIOTECAS:
+	pip install pywin32 google-generativeai pyautogui pyttsx3 SpeechRecognition PyAudio nltk
+	
+
+
+
